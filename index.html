@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typescript</title>
+    <link href="/assets/css/prism.css" rel="stylesheet" />
+    <link href="https://bootswatch.com/4/cyborg/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Typescript</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </nav>
+    <div class="container mt-5">
+
+        <h5> Tipado de variables</h5>
+        <br>
+
+        <pre><code class="language-javascript">
+            // Boolean
+            var isValid = true;
+            //String
+            var lastName = 'Alberto';
+            //etc
+            //Array 
+            var numbers = [12, 5, 7];
+            var numbers2 = [12, 5, 7];
+            //tuplas
+            var place = ['house', 202552];
+            //Enum
+            var Status;
+            (function (Status) {
+                Status[Status["offLine"] = 0] = "offLine";
+                Status[Status["undefined"] = 1] = "undefined";
+                Status[Status["online"] = 2] = "online";
+            })(Status || (Status = {}));
+            var stat = Status.offLine;
+            // Console.log(stat)  ---- 2
+            //Se puede añadir otros valores. 
+            var Status2;
+            (function (Status2) {
+                Status2[Status2["offLine"] = -1] = "offLine";
+                Status2[Status2["undefined"] = 0] = "undefined";
+                Status2[Status2["online"] = 1] = "online";
+            })(Status2 || (Status2 = {}));
+            var noType;
+            noType = 32;
+            noType = true;
+            var stringNew = "este es un mensaje";
+            //no se puede hacer
+            // stringNew = noType
+            var typeUnknow = "este es el mensaje";
+            stringNew = typeUnknow;
+            //Void
+            function greet() {
+                console.log("hello");
+            }
+            
+    </code></pre>
+    </div>
+    <script src="/assets/js/prism.js"></script>
+</body>
+
+</html>
